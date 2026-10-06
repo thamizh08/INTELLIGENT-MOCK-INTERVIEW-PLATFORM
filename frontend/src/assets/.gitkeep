@@ -1,0 +1,9 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brand mark: a speech/mic shape (the interview) intersected by a
+       checkmark rail (the evaluation) - the two things this product does. -->
+  <rect width="40" height="40" rx="10" fill="#14151A"/>
+  <path d="M20 10a5 5 0 0 1 5 5v6a5 5 0 0 1-10 0v-6a5 5 0 0 1 5-5z" fill="#FAF9F6"/>
+  <path d="M13 21a7 7 0 0 0 14 0" stroke="#FAF9F6" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M20 28v3" stroke="#FAF9F6" stroke-width="2" stroke-linecap="round"/>
+  <path d="M15 22.5l3.2 3.2L27 17" stroke="#2F6F5E" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

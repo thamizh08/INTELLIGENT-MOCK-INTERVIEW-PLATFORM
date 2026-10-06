@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   6-THEME PROFESSIONAL FORMAL LEARNING PLATFORM DESIGN SYSTEM
+   ========================================================================== */
+
+/* 1. CORPORATE DARK (Default Executive Dark) */
+:root, [data-theme="dark"] {
+  --bg-main: #0b1120;
+  --bg-surface: #111a2e;
+  --bg-card: #182238;
+  --bg-card-hover: #202d4a;
+  --border-color: #273654;
+  --border-accent: #4f46e5;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --accent-primary: #6366f1;
+  --accent-secondary: #0ea5e9;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --glow-accent: rgba(99, 102, 241, 0.12);
+  --glow-secondary: rgba(14, 165, 233, 0.1);
+  --orb1-color: rgba(99, 102, 241, 0.07);
+  --orb2-color: rgba(14, 165, 233, 0.05);
+  --scrollbar-track: #0b1120;
+  --scrollbar-thumb: #273654;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 4px 16px -2px rgba(0, 0, 0, 0.2);
+  --glass-bg: rgba(24, 34, 56, 0.85);
+  --glass-bg-hover: rgba(32, 45, 74, 0.95);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+/* 2. CAMPUS LIGHT (Pure Corporate & Academic Light) */
+[data-theme="light"] {
+  --bg-main: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --border-color: #e2e8f0;
+  --border-accent: #2563eb;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --accent-primary: #2563eb;
+  --accent-secondary: #0284c7;
+  --accent-emerald: #059669;
+  --accent-amber: #d97706;
+  --glow-accent: rgba(37, 99, 235, 0.08);
+  --glow-secondary: rgba(2, 132, 199, 0.08);
+  --orb1-color: rgba(37, 99, 235, 0.04);
+  --orb2-color: rgba(2, 132, 199, 0.03);
+  --scrollbar-track: #f8fafc;
+  --scrollbar-thumb: #cbd5e1;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 6px 20px -2px rgba(0, 0, 0, 0.04);
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-bg-hover: rgba(255, 255, 255, 1);
+  --glass-border: rgba(0, 0, 0, 0.06);
+}
+
+/* 3. EXECUTIVE NAVY (Deep Oxford & Cobalt) */
+[data-theme="midnight"] {
+  --bg-main: #091122;
+  --bg-surface: #0f1c36;
+  --bg-card: #152649;
+  --bg-card-hover: #1c3260;
+  --border-color: #243c6d;
+  --border-accent: #3b82f6;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #8ca2c7;
+  --accent-primary: #3b82f6;
+  --accent-secondary: #60a5fa;
+  --accent-emerald: #34d399;
+  --accent-amber: #fbbf24;
+  --glow-accent: rgba(59, 130, 246, 0.12);
+  --glow-secondary: rgba(96, 165, 250, 0.1);
+  --orb1-color: rgba(59, 130, 246, 0.06);
+  --orb2-color: rgba(96, 165, 250, 0.04);
+  --scrollbar-track: #091122;
+  --scrollbar-thumb: #243c6d;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 6px 24px -2px rgba(0, 0, 0, 0.25);
+  --glass-bg: rgba(21, 38, 73, 0.85);
+  --glass-bg-hover: rgba(28, 50, 96, 0.95);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+/* 4. HARVARD IVORY (Warm Academic Campus Ivory) */
+[data-theme="warm"] {
+  --bg-main: #faf7f2;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f5efe6;
+  --border-color: #e7ded2;
+  --border-accent: #c2410c;
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-muted: #78716c;
+  --accent-primary: #c2410c;
+  --accent-secondary: #b45309;
+  --accent-emerald: #15803d;
+  --accent-amber: #b45309;
+  --glow-accent: rgba(194, 65, 12, 0.08);
+  --glow-secondary: rgba(180, 83, 9, 0.08);
+  --orb1-color: rgba(194, 65, 12, 0.03);
+  --orb2-color: rgba(180, 83, 9, 0.02);
+  --scrollbar-track: #faf7f2;
+  --scrollbar-thumb: #d7ccc0;
+  --card-shadow: 0 1px 3px 0 rgba(28, 25, 23, 0.04), 0 6px 20px -2px rgba(28, 25, 23, 0.04);
+  --glass-bg: rgba(255, 255, 255, 0.92);
+  --glass-bg-hover: rgba(255, 255, 255, 1);
+  --glass-border: rgba(0, 0, 0, 0.06);
+}
+
+/* 5. CAMBRIDGE FOREST (Formal Academic Deep Emerald) */
+[data-theme="emerald"] {
+  --bg-main: #071915;
+  --bg-surface: #0e2722;
+  --bg-card: #153630;
+  --bg-card-hover: #1d463e;
+  --border-color: #24554b;
+  --border-accent: #10b981;
+  --text-primary: #f0fdf4;
+  --text-secondary: #bbf7d0;
+  --text-muted: #86efac;
+  --accent-primary: #10b981;
+  --accent-secondary: #14b8a6;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --glow-accent: rgba(16, 185, 129, 0.12);
+  --glow-secondary: rgba(20, 184, 166, 0.1);
+  --orb1-color: rgba(16, 185, 129, 0.06);
+  --orb2-color: rgba(20, 184, 166, 0.04);
+  --scrollbar-track: #071915;
+  --scrollbar-thumb: #24554b;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35), 0 6px 24px -2px rgba(0, 0, 0, 0.22);
+  --glass-bg: rgba(21, 54, 48, 0.85);
+  --glass-bg-hover: rgba(29, 70, 62, 0.95);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+/* 6. NORDIC MINIMAL (Minimalist Executive Monochrome Light) */
+[data-theme="nordic"] {
+  --bg-main: #f3f4f6;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #e5e7eb;
+  --border-color: #d1d5db;
+  --border-accent: #111827;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --accent-primary: #1f2937;
+  --accent-secondary: #4b5563;
+  --accent-emerald: #059669;
+  --accent-amber: #d97706;
+  --glow-accent: rgba(31, 41, 55, 0.08);
+  --glow-secondary: rgba(75, 85, 99, 0.08);
+  --orb1-color: rgba(31, 41, 55, 0.03);
+  --orb2-color: rgba(75, 85, 99, 0.02);
+  --scrollbar-track: #f3f4f6;
+  --scrollbar-thumb: #9ca3af;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 4px 16px -2px rgba(0, 0, 0, 0.03);
+  --glass-bg: rgba(255, 255, 255, 0.95);
+  --glass-bg-hover: rgba(255, 255, 255, 1);
+  --glass-border: rgba(0, 0, 0, 0.08);
+}
+
+/* Helper Utilities */
+.bg-theme-main { background-color: var(--bg-main); }
+.bg-theme-surface { background-color: var(--bg-surface); }
+.bg-theme-card { background-color: var(--bg-card); }
+.text-theme-text { color: var(--text-primary); }
+.text-theme-secondary { color: var(--text-secondary); }
+.text-theme-muted { color: var(--text-muted); }
+.border-theme-border { border-color: var(--border-color); }
+.border-theme-accent { border-color: var(--accent-primary); }
+.text-theme-accent { color: var(--accent-primary); }
+.bg-theme-accent { background-color: var(--accent-primary); }
+
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Clean Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Clean Focus Ring */
+:focus-visible {
+  outline: 2px solid var(--accent-primary) !important;
+  outline-offset: 2px;
+}
+
+/* Executive Card Utilities */
+.card-formal, .pixel-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 0.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card-formal:hover, .pixel-box:hover {
+  border-color: var(--accent-primary);
+  box-shadow: var(--card-shadow), 0 4px 12px var(--glow-accent);
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.glass-card:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--accent-primary);
+  box-shadow: var(--card-shadow), 0 4px 12px var(--glow-accent);
+}
+
+/* Soft Ambient Orbs */
+@keyframes ambientFloat1 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.4; }
+  50% { transform: translate(30px, 20px) scale(1.04); opacity: 0.6; }
+}
+
+@keyframes ambientFloat2 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.35; }
+  50% { transform: translate(-25px, -15px) scale(1.04); opacity: 0.5; }
+}
+
+.animate-orb-1 {
+  animation: ambientFloat1 20s ease-in-out infinite;
+}
+
+.animate-orb-2 {
+  animation: ambientFloat2 25s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in { animation: fadeIn 0.25s ease-out forwards; }
+.animate-slide-up { animation: slideUp 0.3s ease-out forwards; }
+.animate-scale-up { animation: scaleIn 0.2s ease-out forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

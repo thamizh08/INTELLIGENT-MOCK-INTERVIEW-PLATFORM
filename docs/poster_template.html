@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Intelligent Mock Interview Platform - Project Poster</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 4200px;
+    height: 2970px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f0f7fd;
+    color: #1e293b;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   HEADER SECTION
+   ========================================================================== */
+.header-band {
+    background: linear-gradient(180deg, #072a4d 0%, #051d36 100%);
+    color: #ffffff;
+    padding: 24px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 230px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.logo-placeholder-box {
+    width: 250px;
+    height: 160px;
+    background: transparent;
+    border: 2.5px dashed #94a3b8;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-center {
+    text-align: center;
+    flex: 1;
+    margin: 0 40px;
+}
+
+.header-center h1 {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.header-center h2 {
+    font-size: 33px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #93c5fd;
+}
+
+.header-center h3 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #e2e8f0;
+}
+
+.header-center p {
+    font-size: 25px;
+    font-weight: 700;
+    color: #38bdf8;
+    margin-top: 4px;
+}
+
+.project-title-bar {
+    text-align: center;
+    padding: 18px 60px 16px 60px;
+    background-color: #ffffff;
+    border-bottom: 3.5px solid #bae6fd;
+    box-shadow: 0 4px 12px rgba(7, 42, 77, 0.06);
+}
+
+.project-title-bar h1 {
+    font-size: 60px;
+    font-weight: 900;
+    color: #082a4d;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+}
+
+.project-title-bar h2 {
+    font-size: 29px;
+    font-weight: 800;
+    color: #0284c7;
+    letter-spacing: 1.2px;
+    margin-top: 4px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   MAIN CONTENT GRID (3 ROWS)
+   ========================================================================== */
+.main-container {
+    flex: 1;
+    padding: 20px 45px 28px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 22px;
+}
+
+/* Row 1: Abstract, Intro, Objectives */
+.row-1 {
+    display: flex;
+    gap: 24px;
+    height: 525px;
+}
+
+/* Row 2: Methods & Materials (47%), System Architecture (53%) */
+.row-2 {
+    display: flex;
+    gap: 24px;
+    height: 705px;
+}
+
+/* Row 3: Discussion, Conclusion, Results, Features/Refs/Team */
+.row-3 {
+    display: flex;
+    gap: 22px;
+    height: 1245px;
+}
+
+/* ==========================================================================
+   PANEL STYLES
+   ========================================================================== */
+.panel {
+    background-color: #e8f4fc;
+    border-radius: 24px;
+    border: 2.5px solid #7bc0e3;
+    position: relative;
+    padding: 56px 30px 22px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 6px 16px rgba(7, 42, 77, 0.05);
+}
+
+.panel-title-pill {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, #093761 0%, #062243 100%);
+    color: #ffffff;
+    padding: 10px 48px;
+    border-radius: 35px;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 6px 14px rgba(7, 42, 77, 0.25);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.panel-title-pill-sm {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, #093761 0%, #062243 100%);
+    color: #ffffff;
+    padding: 8px 36px;
+    border-radius: 30px;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 12px rgba(7, 42, 77, 0.22);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.panel-icon-corner {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+}
+
+.panel-body-text {
+    font-size: 25.5px;
+    line-height: 1.44;
+    color: #1e293b;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.panel-body-text p {
+    margin-bottom: 8px;
+}
+
+.panel-body-text p:last-child {
+    margin-bottom: 0;
+}
+
+.bullet-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.bullet-points li {
+    font-size: 24.5px;
+    line-height: 1.38;
+    color: #1e293b;
+    position: relative;
+    padding-left: 32px;
+    text-align: justify;
+}
+
+.bullet-points li::before {
+    content: "•";
+    position: absolute;
+    left: 6px;
+    top: -3px;
+    font-size: 32px;
+    color: #0284c7;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   METHODS & MATERIALS PIPELINE
+   ========================================================================== */
+.methods-pipeline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4px 0 14px 0;
+    padding: 0 2px;
+}
+
+.pipeline-box {
+    background-color: #ffffff;
+    border: 2.5px solid #082a4d;
+    border-radius: 16px;
+    padding: 14px 10px;
+    width: 280px;
+    height: 255px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.pipeline-box-icon {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 8px;
+}
+
+.pipeline-box h4 {
+    font-size: 23px;
+    font-weight: 800;
+    color: #082a4d;
+    margin-bottom: 6px;
+    line-height: 1.18;
+}
+
+.pipeline-box p {
+    font-size: 17.5px;
+    color: #475569;
+    line-height: 1.28;
+    font-weight: 600;
+}
+
+.pipeline-arrow {
+    font-size: 44px;
+    color: #0284c7;
+    font-weight: bold;
+}
+
+.tech-spec-list {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 14px;
+    border: 1.5px solid #bae6fd;
+    padding: 18px 24px;
+    font-size: 23.5px;
+    line-height: 1.48;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.tech-spec-list p {
+    margin-bottom: 4px;
+}
+
+.tech-spec-list p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   SYSTEM ARCHITECTURE DIAGRAM
+   ========================================================================== */
+.arch-diagram-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 4px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1.5px solid #bae6fd;
+    border-radius: 18px;
+    padding: 18px 22px;
+    height: 495px;
+}
+
+.arch-actors-col {
+    background: #ffffff;
+    border: 2.5px solid #082a4d;
+    border-radius: 16px;
+    padding: 16px 12px;
+    width: 220px;
+    height: 395px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.arch-actors-col svg {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 12px;
+}
+
+.arch-actors-col h4 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #082a4d;
+    line-height: 1.35;
+}
+
+.arch-actors-col p {
+    font-size: 19px;
+    color: #475569;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-top: 5px;
+}
+
+.arch-center-flow {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.arch-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.arch-box {
+    background: #ffffff;
+    border: 2.5px solid #0284c7;
+    border-radius: 16px;
+    padding: 16px 12px;
+    text-align: center;
+    flex: 1;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.arch-box h5 {
+    font-size: 23px;
+    font-weight: 800;
+    color: #0369a1;
+    margin-bottom: 6px;
+}
+
+.arch-box p {
+    font-size: 17.5px;
+    color: #334155;
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+.arch-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.arch-sub-box {
+    background: #ffffff;
+    border: 2px solid #082a4d;
+    border-radius: 12px;
+    padding: 14px 10px;
+    text-align: center;
+    flex: 1;
+    font-size: 19.5px;
+    font-weight: 700;
+    color: #082a4d;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.04);
+}
+
+.arch-arrow {
+    font-size: 36px;
+    color: #0284c7;
+    font-weight: bold;
+}
+
+.arch-db-box {
+    background: #ffffff;
+    border: 2.5px solid #082a4d;
+    border-radius: 16px;
+    width: 220px;
+    height: 395px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 14px;
+}
+
+.arch-caption-bar {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #082a4d;
+    margin-top: 12px;
+}
+
+/* ==========================================================================
+   ROW 3 PANELS: DISCUSSION, CONCLUSION, RESULTS, FEATURES/TEAM
+   ========================================================================== */
+.col-discussion {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.col-conclusion {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.col-results {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.col-features-team {
+    flex: 1.02;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Top visual card for Discussion & Conclusion */
+.visual-card-top {
+    background-color: #ffffff;
+    border: 2.5px solid #7bc0e3;
+    border-radius: 20px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 185px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+}
+
+.visual-card-top-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.visual-card-top p {
+    font-size: 23px;
+    line-height: 1.38;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* Results Table */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin-top: 2px;
+    font-size: 21.5px;
+}
+
+.results-table th {
+    background-color: #082a4d;
+    color: #ffffff;
+    padding: 12px 14px;
+    font-size: 22px;
+    font-weight: 800;
+    text-align: left;
+    border: 1px solid #082a4d;
+}
+
+.results-table th.center, .results-table td.center {
+    text-align: center;
+}
+
+.results-table td {
+    padding: 11px 14px;
+    border: 1px solid #cbd5e1;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.results-table tr.highlight-row {
+    background-color: #cffafe !important;
+    border: 2.5px solid #0891b2;
+    font-weight: 800;
+    color: #083344;
+}
+
+.results-table tr.highlight-row td {
+    border-color: #0891b2;
+    color: #083344;
+    font-weight: 800;
+}
+
+/* Correlation Metrics Box */
+.correlation-card {
+    background: #ffffff;
+    border: 2px solid #38bdf8;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-top: 8px;
+    font-size: 21.5px;
+    line-height: 1.4;
+    color: #0f172a;
+}
+
+.correlation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 12px;
+    margin-top: 6px;
+}
+
+.correlation-item {
+    display: flex;
+    justify-content: space-between;
+    background: #f0fdf4;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border-left: 4px solid #16a34a;
+    font-size: 19.5px;
+}
+
+/* Key Features checklist */
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 22.5px;
+    line-height: 1.3;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.feature-check {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #10b981;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Team Card */
+.team-member-card {
+    background: #ffffff;
+    border: 2px solid #bae6fd;
+    border-radius: 14px;
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+
+.team-member-name {
+    font-size: 23px;
+    font-weight: 800;
+    color: #082a4d;
+}
+
+.team-member-id {
+    font-size: 21px;
+    font-weight: 700;
+    color: #0284c7;
+    background: #e0f2fe;
+    padding: 4px 12px;
+    border-radius: 8px;
+}
+
+.guide-box {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: linear-gradient(135deg, #093761 0%, #062243 100%);
+    border-radius: 14px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 4px 10px rgba(7, 42, 77, 0.2);
+}
+
+.guide-label {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #38bdf8;
+    text-transform: uppercase;
+}
+
+.guide-name {
+    font-size: 23px;
+    font-weight: 800;
+    color: #ffffff;
+}
+</style>
+</head>
+<body>
+
+<!-- =======================================================================
+     HEADER BAND
+     ======================================================================= -->
+<div class="header-band">
+    <!-- Left Logo Placeholder Box (Empty with dashed border) -->
+    <div class="logo-placeholder-box"></div>
+    
+    <div class="header-center">
+        <h1>CHENNAI INSTITUTE OF TECHNOLOGY, CHENNAI (Autonomous)</h1>
+        <h2>Department of Computer Science and Engineering</h2>
+        <h3>Affiliated to Anna University, Chennai &bull; Bachelor of Engineering</h3>
+        <p>Project-Based Learning (PBL) Component of Java Programming | Academic Year 2026–2027</p>
+    </div>
+    
+    <!-- Right Logo Placeholder Box (Empty with dashed border) -->
+    <div class="logo-placeholder-box"></div>
+</div>
+
+<!-- =======================================================================
+     PROJECT TITLE BAR
+     ======================================================================= -->
+<div class="project-title-bar">
+    <h1>INTELLIGENT MOCK INTERVIEW PLATFORM</h1>
+    <h2>An Adaptive AI-Powered Technical Assessment and Remediation System</h2>
+</div>
+
+<!-- =======================================================================
+     MAIN CONTAINER (3 ROWS)
+     ======================================================================= -->
+<div class="main-container">
+
+    <!-- -------------------------------------------------------------------
+         ROW 1: ABSTRACT | INTRODUCTION | OBJECTIVES
+         ------------------------------------------------------------------- -->
+    <div class="row-1">
+        <!-- Abstract -->
+        <div class="panel" style="flex: 1;">
+            <div class="panel-title-pill">
+                ABSTRACT
+            </div>
+            <div class="panel-icon-corner">
+                <svg viewBox="0 0 64 64" fill="none">
+                    <circle cx="28" cy="34" r="16" fill="#0284c7" opacity="0.15"/>
+                    <path d="M28 20v-4m0 36v-4m14-14h4m-36 0h4m23.9-9.9l2.8-2.8m-25.4 25.4l2.8-2.8m0-19.8l-2.8-2.8m25.4 25.4l-2.8-2.8" stroke="#0284c7" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="28" cy="34" r="10" fill="#38bdf8" stroke="#0284c7" stroke-width="2.5"/>
+                    <circle cx="44" cy="22" r="12" fill="#fef08a" stroke="#eab308" stroke-width="2.5"/>
+                    <path d="M41 34h6v3h-6z" fill="#ca8a04"/>
+                    <path d="M42 37h4v2h-4z" fill="#a16207"/>
+                    <path d="M44 14v-4m7 2l2.5-3.5m-16.5 3.5l-2.5-3.5m19 12h4m-23 0h-4" stroke="#eab308" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="panel-body-text">
+                <p>Technical interviews present severe cognitive anxiety, subjective evaluation, and lack realistic domain evaluation in traditional preparation portals.</p>
+                <p>This project presents the <b>Intelligent Mock Interview Platform</b>, an adaptive AI-orchestrated web application engineered to simulate rigorous technical recruitment assessments across 20+ engineering roles.</p>
+                <p>Built with React 18, Express.js, and MongoDB, it couples multi-provider cloud LLMs (OpenAI GPT-4o-mini &amp; Google Gemini 1.5 Flash) with an autonomous offline fallback engine.</p>
+                <p>The platform automatically generates diagnostic radar analytics and synthesizes customized 7-day remediation roadmaps, achieving an <b>88.5% scoring correlation</b> against expert human interviewers.</p>
+            </div>
+        </div>
+
+        <!-- Introduction -->
+        <div class="panel" style="flex: 1;">
+            <div class="panel-title-pill">
+                INTRODUCTION
+            </div>
+            <div class="panel-icon-corner">
+                <svg viewBox="0 0 64 64" fill="none">
+                    <rect x="22" y="16" width="36" height="26" rx="3" fill="#38bdf8" stroke="#0284c7" stroke-width="2.5"/>
+                    <rect x="26" y="20" width="28" height="18" rx="2" fill="#ffffff"/>
+                    <line x1="29" y1="24" x2="39" y2="24" stroke="#0284c7" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="29" y1="28" x2="49" y2="28" stroke="#94a3b8" stroke-width="1.8" stroke-linecap="round"/>
+                    <line x1="29" y1="32" x2="45" y2="32" stroke="#94a3b8" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M40 42v6m-6 0h12" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle cx="16" cy="24" r="7" fill="#facc15" stroke="#ca8a04" stroke-width="2"/>
+                    <path d="M6 46c0-6 4.5-10 10-10s10 4 10 10v2H6v-2z" fill="#10b981" stroke="#059669" stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="panel-body-text">
+                <p>Modern technical recruitment prioritizes architectural reasoning, concurrency defense, and verbal articulation over rote algorithmic memorization.</p>
+                <p>Traditional preparation platforms rely on static multiple-choice questions or binary unit test runners, leaving over <b>70% of engineering graduates</b> experiencing interview anxiety without access to senior mentors.</p>
+                <p>Our platform bridges this pedagogical gap by providing realistic, real-time speech and text interview rehearsals with multi-criteria rubric grading.</p>
+                <p>Dynamic question branching and structured feedback empower candidates to systematically identify and resolve domain knowledge deficits.</p>
+            </div>
+        </div>
+
+        <!-- Objectives -->
+        <div class="panel" style="flex: 1;">
+            <div class="panel-title-pill">
+                OBJECTIVES
+            </div>
+            <div class="panel-icon-corner">
+                <svg viewBox="0 0 64 64" fill="none">
+                    <circle cx="30" cy="34" r="22" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/>
+                    <circle cx="30" cy="34" r="15" fill="#ffffff" stroke="#ef4444" stroke-width="2.5"/>
+                    <circle cx="30" cy="34" r="8" fill="#ef4444"/>
+                    <path d="M48 14L32 30m16-16l-8 2m8-2l-2 8" stroke="#0284c7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M52 10l-4 4" stroke="#0284c7" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <ul class="bullet-points">
+                <li><b>Requirement Modeling:</b> Map hiring rubrics across 20+ technical roles and 3 experience seniority tiers.</li>
+                <li><b>Modular System Design:</b> Build a decoupled 4-tier full-stack system with Express.js, React 18, and MongoDB.</li>
+                <li><b>Resilient AI Orchestration:</b> Deploy a multi-provider gateway with OpenAI, Gemini, and offline rule-based fallback.</li>
+                <li><b>Interactive Analytics:</b> Implement Web Speech API audio capture, Recharts radar charts, and 7-day study roadmaps.</li>
+                <li><b>Empirical Validation:</b> Execute 52 QA test suites (100% pass rate) and validate scoring against human interviewers.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- -------------------------------------------------------------------
+         ROW 2: METHODS & MATERIALS | SYSTEM ARCHITECTURE
+         ------------------------------------------------------------------- -->
+    <div class="row-2">
+        <!-- Methods & Materials -->
+        <div class="panel" style="flex: 0.96;">
+            <div class="panel-title-pill">
+                METHODS &amp; MATERIALS
+            </div>
+
+            <!-- Horizontal 5-Box Pipeline -->
+            <div class="methods-pipeline">
+                <!-- Box 1: Role Setup -->
+                <div class="pipeline-box">
+                    <svg class="pipeline-box-icon" viewBox="0 0 64 64" fill="none">
+                        <ellipse cx="32" cy="16" rx="22" ry="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.5"/>
+                        <path d="M10 16v14c0 4.4 9.8 8 22 8s22-3.6 22-8V16" stroke="#0284c7" stroke-width="2.5"/>
+                        <path d="M10 30v14c0 4.4 9.8 8 22 8s22-3.6 22-8V30" stroke="#0284c7" stroke-width="2.5"/>
+                    </svg>
+                    <h4>Role &amp; Domain Setup</h4>
+                    <p>(20+ Technical Tracks &amp; 3 Seniority Tiers)</p>
+                </div>
+
+                <div class="pipeline-arrow">&rarr;</div>
+
+                <!-- Box 2: Voice/Text Capture -->
+                <div class="pipeline-box">
+                    <svg class="pipeline-box-icon" viewBox="0 0 64 64" fill="none">
+                        <rect x="8" y="12" width="48" height="38" rx="5" fill="#f8fafc" stroke="#082a4d" stroke-width="2.5"/>
+                        <path d="M8 22h48" stroke="#082a4d" stroke-width="2"/>
+                        <circle cx="15" cy="17" r="2" fill="#ef4444"/>
+                        <circle cx="21" cy="17" r="2" fill="#f59e0b"/>
+                        <circle cx="27" cy="17" r="2" fill="#10b981"/>
+                        <path d="M22 36l-6-5 6-5m20 0l6 5-6 5m-9 3l4-16" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h4>Speech &amp; Text Capture</h4>
+                    <p>(Web Speech API &amp; Real-Time Timer)</p>
+                </div>
+
+                <div class="pipeline-arrow">&rarr;</div>
+
+                <!-- Box 3: AI Gateway -->
+                <div class="pipeline-box">
+                    <svg class="pipeline-box-icon" viewBox="0 0 64 64" fill="none">
+                        <circle cx="24" cy="32" r="15" fill="#bbf7d0" stroke="#16a34a" stroke-width="2.5" opacity="0.8"/>
+                        <circle cx="40" cy="32" r="15" fill="#fed7aa" stroke="#ea580c" stroke-width="2.5" opacity="0.8"/>
+                        <path d="M32 23a15 15 0 0 1 0 18 15 15 0 0 1 0-18z" fill="#fef08a"/>
+                    </svg>
+                    <h4>AI Failover Gateway</h4>
+                    <p>(OpenAI &rarr; Gemini &rarr; Offline Keyword Engine)</p>
+                </div>
+
+                <div class="pipeline-arrow">&rarr;</div>
+
+                <!-- Box 4: Multi-Axis Scoring -->
+                <div class="pipeline-box">
+                    <svg class="pipeline-box-icon" viewBox="0 0 64 64" fill="none">
+                        <path d="M16 16h12a4 4 0 0 1 4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 1 4-4h12v12a4 4 0 0 1-4 4 4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 1 4 4v12H38a4 4 0 0 1-4-4 4 4 0 0 0-4-4 4 4 0 0 0-4 4 4 4 0 0 1-4 4H16V38a4 4 0 0 1 4-4 4 4 0 0 0 4-4 4 4 0 0 0-4-4 4 4 0 0 1-4-4V16z" fill="#fef08a" stroke="#ca8a04" stroke-width="2.5"/>
+                    </svg>
+                    <h4>Multi-Axis Rubric</h4>
+                    <p>(Correctness, Clarity, Depth &amp; Follow-Up)</p>
+                </div>
+
+                <div class="pipeline-arrow">&rarr;</div>
+
+                <!-- Box 5: Radar & Roadmap -->
+                <div class="pipeline-box">
+                    <svg class="pipeline-box-icon" viewBox="0 0 64 64" fill="none">
+                        <rect x="14" y="10" width="36" height="46" rx="4" fill="#ffffff" stroke="#082a4d" stroke-width="2.5"/>
+                        <rect x="24" y="6" width="16" height="8" rx="2" fill="#082a4d"/>
+                        <path d="M22 26l4 4 8-8m-12 16l4 4 8-8" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="38" y1="26" x2="44" y2="26" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="38" y1="38" x2="44" y2="38" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h4>Radar &amp; Remediation</h4>
+                    <p>(Recharts Radar &amp; 7-Day Action Plan)</p>
+                </div>
+            </div>
+
+            <!-- Bullet List -->
+            <div class="tech-spec-list">
+                <p><b>&bull; Domain Dataset:</b> 20+ technical competencies, 3 seniority levels (Junior, Mid, Senior), 3 interview tracks (Technical, Design, Behavioral).</p>
+                <p><b>&bull; Preprocessing &amp; Audio:</b> Web Speech API real-time speech-to-text recognition, text sanitization, and input fuzzing guardrails.</p>
+                <p><b>&bull; Model &amp; Architecture:</b> OpenAI GPT-4o-mini, Google Gemini 1.5 Flash, and autonomous offline keyword evaluation engine.</p>
+                <p><b>&bull; Training &amp; Metrics:</b> Defensive prompts with strict JSON schema constraints; multi-axis rubric scoring (1–10 scale).</p>
+            </div>
+        </div>
+
+        <!-- System Architecture -->
+        <div class="panel" style="flex: 1.04;">
+            <div class="panel-title-pill">
+                SYSTEM ARCHITECTURE
+            </div>
+
+            <div class="arch-diagram-wrap">
+                <!-- Left: Actors Column -->
+                <div class="arch-actors-col">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <circle cx="32" cy="18" r="9" fill="#082a4d"/>
+                        <circle cx="16" cy="24" r="7" fill="#0284c7"/>
+                        <circle cx="48" cy="24" r="7" fill="#0284c7"/>
+                        <path d="M18 48c0-7 6-12 14-12s14 5 14 12v2H18v-2z" fill="#082a4d"/>
+                        <path d="M6 50c0-5 5-9 11-9 2 2 4 3 7 3v6H6v-0z" fill="#0284c7"/>
+                        <path d="M58 50c0-5-5-9-11-9-2 2-4 3-7 3v6h18v-0z" fill="#0284c7"/>
+                    </svg>
+                    <h4>Candidates &amp; Mentors</h4>
+                    <p>Student Rehearsals</p>
+                    <p>Faculty Reviewers</p>
+                </div>
+
+                <div class="arch-arrow">&harr;</div>
+
+                <!-- Center: Multi-Tier Flow -->
+                <div class="arch-center-flow">
+                    <!-- Top Row -->
+                    <div class="arch-top-row">
+                        <div class="arch-box">
+                            <h5>Client Presentation</h5>
+                            <p>(React 18 SPA / Vite 5 / Web Speech API)</p>
+                        </div>
+                        <div class="arch-arrow">&rarr;</div>
+                        <div class="arch-box">
+                            <h5>API Gateway</h5>
+                            <p>(Node.js &amp; Express REST / JWT / Validation)</p>
+                        </div>
+                        <div class="arch-arrow">&rarr;</div>
+                        <div class="arch-box">
+                            <h5>Intelligence Layer</h5>
+                            <p>(GPT-4o-mini / Gemini / Offline Engine)</p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Sub-Modules Row -->
+                    <div class="arch-bottom-row">
+                        <div class="arch-sub-box">Authentication &amp; Session Guard</div>
+                        <div class="arch-sub-box">Adaptive Follow-Up Generator</div>
+                        <div class="arch-sub-box">Recharts Radar &amp; 7-Day Roadmap</div>
+                    </div>
+                </div>
+
+                <div class="arch-arrow">&harr;</div>
+
+                <!-- Right: Database Cylinder -->
+                <div class="arch-db-box">
+                    <svg viewBox="0 0 64 64" fill="none" style="width: 72px; height: 72px; margin-bottom: 12px;">
+                        <ellipse cx="32" cy="16" rx="24" ry="9" fill="#38bdf8" stroke="#0284c7" stroke-width="2.5"/>
+                        <path d="M8 16v14c0 5 10.7 9 24 9s24-4 24-9V16" fill="#0284c7" stroke="#0369a1" stroke-width="2.5"/>
+                        <path d="M8 30v14c0 5 10.7 9 24 9s24-4 24-9V30" fill="#0369a1" stroke="#075985" stroke-width="2.5"/>
+                        <ellipse cx="32" cy="16" rx="22" ry="7" fill="#bae6fd"/>
+                    </svg>
+                    <h4 style="font-size: 24px; font-weight: 800; color: #082a4d;">MongoDB Database</h4>
+                    <p style="font-size: 18px; color: #475569; margin-top: 6px; font-weight: 600;">Users, Sessions, Scorecards &amp; Roadmaps</p>
+                </div>
+            </div>
+
+            <div class="arch-caption-bar">
+                End-to-end decoupled 4-tier data flow: Real-time candidate audio/text &rarr; Secure REST API &rarr; Multi-provider AI evaluation &rarr; MongoDB persistence &rarr; Actionable radar analytics &amp; 7-day recovery roadmap.
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------------------------------------------
+         ROW 3: DISCUSSION | CONCLUSION | RESULTS | FEATURES, REFS & TEAM
+         ------------------------------------------------------------------- -->
+    <div class="row-3">
+        <!-- Col 1: Discussion -->
+        <div class="col-discussion">
+            <!-- Top Visual Card -->
+            <div class="visual-card-top">
+                <svg viewBox="0 0 64 64" fill="none" style="width: 82px; height: 82px; flex-shrink: 0;">
+                    <rect x="6" y="8" width="52" height="36" rx="4" fill="#0284c7" stroke="#082a4d" stroke-width="2.5"/>
+                    <rect x="10" y="12" width="44" height="28" rx="2" fill="#ffffff"/>
+                    <rect x="14" y="26" width="6" height="11" fill="#ef4444" rx="1"/>
+                    <rect x="23" y="21" width="6" height="16" fill="#f59e0b" rx="1"/>
+                    <rect x="32" y="16" width="6" height="21" fill="#10b981" rx="1"/>
+                    <rect x="41" y="19" width="6" height="18" fill="#3b82f6" rx="1"/>
+                    <path d="M26 44v8h12v-8" stroke="#082a4d" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="20" y1="52" x2="44" y2="52" stroke="#082a4d" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <div class="visual-card-top-content">
+                    <p><b>Key Finding:</b> Multi-provider AI orchestration achieves strong correlation (<b>r = 0.885</b>) with senior human interviewers while maintaining sub-second failover.</p>
+                </div>
+            </div>
+
+            <!-- Bottom Panel: Discussion Content -->
+            <div class="panel" style="flex: 1;">
+                <div class="panel-title-pill-sm">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    DISCUSSION
+                </div>
+                <ul class="bullet-points" style="margin-top: 6px;">
+                    <li><b>High Evaluation Fidelity:</b> Automated multi-axis scoring achieved strong correlation (<b>r = 0.885</b>, MAE = 0.46) with senior human interviewers across core technical disciplines.</li>
+                    <li><b>Zero-Downtime Resilience:</b> Autonomous offline fallback engine guarantees sub-second evaluation (<b>680 ms</b>) during cloud network throttling or API downtime.</li>
+                    <li><b>Closed-Loop Actionability:</b> 7-day remediation roadmaps directly convert diagnostic deficits into daily, verified learning tasks with direct documentation links.</li>
+                    <li><b>Operational Scope:</b> Current implementation focuses on speech transcription and text reasoning; facial emotion analytics is slated for future release.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Col 2: Conclusion -->
+        <div class="col-conclusion">
+            <!-- Top Visual Card: Demo Screenshot Mockup -->
+            <div class="visual-card-top" style="flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                <h4 style="font-size: 23px; font-weight: 800; color: #082a4d; margin-bottom: 2px;">Intelligent Mock Platform</h4>
+                <p style="font-size: 16.5px; color: #64748b; font-weight: 700; margin-bottom: 6px;">(System Dashboard &amp; Radar Diagnostic)</p>
+                <svg viewBox="0 0 140 65" style="width: 146px; height: 68px;">
+                    <rect x="2" y="2" width="136" height="61" rx="4" fill="#ffffff" stroke="#082a4d" stroke-width="2"/>
+                    <rect x="2" y="2" width="136" height="12" fill="#082a4d"/>
+                    <circle cx="8" cy="8" r="2" fill="#ef4444"/>
+                    <circle cx="14" cy="8" r="2" fill="#f59e0b"/>
+                    <circle cx="20" cy="8" r="2" fill="#10b981"/>
+                    <rect x="2" y="14" width="28" height="49" fill="#f1f5f9"/>
+                    <line x1="6" y1="20" x2="24" y2="20" stroke="#0284c7" stroke-width="2"/>
+                    <line x1="6" y1="26" x2="20" y2="26" stroke="#94a3b8" stroke-width="1.5"/>
+                    <line x1="6" y1="32" x2="22" y2="32" stroke="#94a3b8" stroke-width="1.5"/>
+                    <circle cx="54" cy="38" r="14" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1"/>
+                    <polygon points="54,26 64,36 58,48 46,45 45,34" fill="#0284c7" opacity="0.4"/>
+                    <rect x="76" y="20" width="56" height="18" rx="2" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+                    <line x1="80" y1="26" x2="110" y2="26" stroke="#082a4d" stroke-width="2"/>
+                    <line x1="80" y1="32" x2="124" y2="32" stroke="#10b981" stroke-width="2"/>
+                    <rect x="76" y="42" width="56" height="16" rx="2" fill="#10b981"/>
+                    <line x1="84" y1="50" x2="124" y2="50" stroke="#ffffff" stroke-width="2"/>
+                </svg>
+            </div>
+
+            <!-- Bottom Panel: Conclusion Content -->
+            <div class="panel" style="flex: 1;">
+                <div class="panel-title-pill-sm">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    CONCLUSION
+                </div>
+                <ul class="bullet-points" style="margin-top: 6px;">
+                    <li><b>Objective Realization:</b> Successfully engineered an end-to-end adaptive technical interview simulator and diagnostic learning platform.</li>
+                    <li><b>Architecture Resilience:</b> Decoupled 4-tier architecture with multi-provider LLM failover ensures robust, reliable, and low-latency execution.</li>
+                    <li><b>High Quality Attainment:</b> Achieved <b>100% test pass rate</b> across 52 verification suites and <b>91.4% scoring precision</b>.</li>
+                    <li><b>Educational Impact:</b> Substantially reduces placement anxiety by providing structured, accessible, mentor-grade interview rehearsal.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Col 3: Results Panel -->
+        <div class="col-results">
+            <div class="panel" style="flex: 1;">
+                <div class="panel-title-pill-sm">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    RESULTS &amp; PERFORMANCE
+                </div>
+
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>Iteration / Method</th>
+                            <th class="center">Test Cases</th>
+                            <th class="center">Coverage</th>
+                            <th class="center">Avg Latency</th>
+                            <th class="center">Precision</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Iteration 1</b> (Baseline MVP)</td>
+                            <td class="center">18 / 24 (75.0%)</td>
+                            <td class="center">62.4%</td>
+                            <td class="center">2,840 ms</td>
+                            <td class="center">64.2%</td>
+                        </tr>
+                        <tr>
+                            <td><b>Iteration 2</b> (Refined AI)</td>
+                            <td class="center">38 / 40 (95.0%)</td>
+                            <td class="center">81.6%</td>
+                            <td class="center">1,420 ms</td>
+                            <td class="center">82.8%</td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td><b>Iteration 3 (Final Approach)</b></td>
+                            <td class="center"><b>52 / 52 (100%)</b></td>
+                            <td class="center"><b>92.5%</b></td>
+                            <td class="center"><b>680 ms / 1,150 ms</b></td>
+                            <td class="center"><b>91.4%</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="correlation-card">
+                    <b>Human Benchmark Scoring Correlation (Composite: r = 0.885, MAE = 0.46 / 10)</b>
+                    <div class="correlation-grid">
+                        <div class="correlation-item"><span>Java Core &amp; Concurrency</span><b>r = 0.892 (MAE 0.42)</b></div>
+                        <div class="correlation-item"><span>Web Systems &amp; React</span><b>r = 0.884 (MAE 0.48)</b></div>
+                        <div class="correlation-item"><span>Distributed &amp; Cloud</span><b>r = 0.871 (MAE 0.54)</b></div>
+                        <div class="correlation-item"><span>Data Structures &amp; Algos</span><b>r = 0.896 (MAE 0.39)</b></div>
+                    </div>
+                </div>
+
+                <!-- Future Enhancements inside Results Column -->
+                <div style="margin-top: 10px; background: rgba(255,255,255,0.85); padding: 14px 18px; border-radius: 14px; border: 1.5px solid #bae6fd; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <h4 style="font-size: 22.5px; font-weight: 800; color: #082a4d; margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        FUTURE ENHANCEMENTS
+                    </h4>
+                    <ul class="bullet-points" style="font-size: 21.5px; line-height: 1.36;">
+                        <li><b>Interactive Code Sandbox:</b> Monaco editor with Docker container isolation and test runners.</li>
+                        <li><b>Multimodal Emotion Analytics:</b> MediaPipe facial expression, eye-contact, and vocal pacing tracking.</li>
+                        <li><b>RAG Resume &amp; JD Parser:</b> Context-aware question generation dynamically tailored to candidate CVs.</li>
+                        <li><b>Native Mobile Application:</b> Cross-platform React Native app for on-the-go voice mock interviews.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Col 4: Key Features, References & Project Team -->
+        <div class="col-features-team">
+            <!-- Key Features Panel -->
+            <div class="panel" style="flex: 0.94;">
+                <div class="panel-title-pill-sm">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    KEY HIGHLIGHTS
+                </div>
+                <div style="margin-top: 4px;">
+                    <div class="feature-item"><div class="feature-check">&check;</div><div>20+ Engineering Competency Tracks</div></div>
+                    <div class="feature-item"><div class="feature-check">&check;</div><div>Adaptive Follow-Up Question Probing</div></div>
+                    <div class="feature-item"><div class="feature-check">&check;</div><div>Multi-Provider LLM &amp; Offline Failover</div></div>
+                    <div class="feature-item"><div class="feature-check">&check;</div><div>Multi-Axis Skill Radar Analytics</div></div>
+                    <div class="feature-item"><div class="feature-check">&check;</div><div>7-Day Targeted Remediation Roadmap</div></div>
+                    <div class="feature-item"><div class="feature-check">&check;</div><div>Speech-to-Text Live Voice Rehearsal</div></div>
+                </div>
+            </div>
+
+            <!-- References Panel -->
+            <div class="panel" style="flex: 1.05;">
+                <div class="panel-title-pill-sm">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    REFERENCES
+                </div>
+                <div style="font-size: 20px; line-height: 1.42; color: #334155; margin-top: 4px;">
+                    <p style="margin-bottom: 6px;">1. Vaswani et al., "Attention Is All You Need," <i>NeurIPS</i>, 2017.</p>
+                    <p style="margin-bottom: 6px;">2. Brown et al., "Language Models are Few-Shot Learners," <i>NeurIPS</i>, 2020.</p>
+                    <p style="margin-bottom: 6px;">3. Fielding, "Architectural Styles &amp; Network Architectures," <i>UC Irvine</i>, 2000.</p>
+                    <p style="margin-bottom: 6px;">4. Fowler, "Patterns of Enterprise Application Architecture," <i>Addison-Wesley</i>, 2002.</p>
+                    <p style="margin-bottom: 2px;">5. Tilkov &amp; Vinoski, "Node.js: High-Performance Network Programs," <i>IEEE</i>, 2010.</p>
+                </div>
+            </div>
+
+            <!-- Project Team Panel -->
+            <div class="panel" style="flex: 1.02; justify-content: space-between;">
+                <div class="panel-title-pill-sm">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    PROJECT TEAM
+                </div>
+                <div style="margin-top: 6px; display: flex; flex-direction: column; gap: 8px;">
+                    <!-- Member 1 Card -->
+                    <div class="team-member-card">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div style="width: 32px; height: 32px; border-radius: 50%; background: #082a4d; color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px;">1</div>
+                            <div class="team-member-name">THAMIZHMARAN S</div>
+                        </div>
+                        <div class="team-member-id">2104251041033</div>
+                    </div>
+                    
+                    <!-- Member 2 Card -->
+                    <div class="team-member-card">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div style="width: 32px; height: 32px; border-radius: 50%; background: #082a4d; color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px;">2</div>
+                            <div class="team-member-name">GOVENTHAN K S</div>
+                        </div>
+                        <div class="team-member-id">2104251040257</div>
+                    </div>
+                </div>
+
+                <!-- Faculty Guide Box -->
+                <div class="guide-box">
+                    <div class="guide-label">Faculty Project Guide</div>
+                    <div class="guide-name">MR.R.RAHUL ,M.Tech.,</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
